@@ -4,15 +4,21 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { PdfComponent } from './pdf/pdf.component';
 import { DownloadService } from './service/download.service';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
+import { PdfViewerComponent } from './pdf-viewer/pdf-viewer.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PdfComponent
+    PdfComponent,
+    PdfViewerComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    PdfViewerModule,
+    AppRoutingModule
   ],
   providers: [DownloadService],
   bootstrap: [AppComponent]

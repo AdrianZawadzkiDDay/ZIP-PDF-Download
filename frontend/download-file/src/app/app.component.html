@@ -1,2 +1,5 @@
 <h1>APP</h1>
-<app-pdf />
+<app-pdf *ngIf="!showPdfViewer" />
+
+<router-outlet></router-outlet>
+<app-pdf-viewer *ngIf="showPdfViewer"></app-pdf-viewer>
